@@ -337,7 +337,7 @@ ph-ee-engine:
 
   mockpayment:
     enabled: true
-    image: "419830066942.dkr.ecr.ap-south-1.amazonaws.com/phee-mock-payment-schema"
+    image: "419830066942.dkr.ecr.ap-south-1.amazonaws.com/phee-mock-paymentschema"
     imageTag: latest
     SPRING_PROFILES_ACTIVE: "bb,tenants"
     DFSPIDS: "gorilla,lion"
