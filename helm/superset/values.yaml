@@ -46,7 +46,7 @@ ph-ee-engine:
         enabled: true
 
   elasticsearch:
-    enabled: true
+    enabled: false
     replicas: 1
     imageTag: 7.16.3
     minimumMasterNodes: 1
@@ -114,7 +114,7 @@ ph-ee-engine:
       initialDelaySeconds: 45
       timeoutSeconds: 15
       successThreshold: 1
-    enabled: true
+    enabled: false
     protocol: http
     imageTag: 7.16.3
     kibanaConfig:
@@ -215,7 +215,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   ph_ee_connector_mojaloop:
-    enabled: true
+    enabled: false
     DFSPIDS: "gorilla,lion"
     ingress:
       enabled: true
@@ -246,7 +246,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   channel:
-    enabled: true
+    enabled: false
     imageTag: latest
     SPRING_PROFILES_ACTIVE: "bb,tenants"
     DFSPIDS: "rhino,gorilla"
@@ -289,7 +289,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   operations_app:
-    enabled: true
+    enabled: false
     imageTag: latest
     tenants: "rhino,gorilla"
     ingress:
@@ -312,7 +312,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   operations_web:
-    enabled: true
+    enabled: false
     imageTag: latest
     SPRING_PROFILES_ACTIVE: "bb"
     ingress:
@@ -333,7 +333,7 @@ ph-ee-engine:
     hostname: "ops-bk.sandbox.fynarfin.io"
 
   ph_ee_connector_gsma:
-    enabled: true
+    enabled: false
     imageTag: latest
     SPRING_PROFILES_ACTIVE: "bb"
     deployment:
@@ -353,7 +353,7 @@ ph-ee-engine:
     enabled: false
 
   notifications:
-    enabled: true
+    enabled: false
     imageTag: latest
     NOTIFICATION_FAILURE_ENABLED: "false"
     ingress:
@@ -376,7 +376,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   connector_bulk:
-    enabled: true
+    enabled: false
     imageTag: latest
     tenant: "rhino,gorilla"
     aws:
@@ -406,7 +406,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   zeebe_ops:
-    enabled: true
+    enabled: false
     imageTag: latest
     tenants: "rhino,gorilla"
     ingress:
@@ -429,7 +429,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   messagegateway:
-    enabled: true
+    enabled: false
     imageTag: latest
     secret:
       value:
@@ -455,13 +455,13 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   importer_es:
-    enabled: true
+    enabled: false
     imageTag: latest
     reporting:
       enabled: false
 
   importer_rdbms:
-    enabled: true
+    enabled: false
     imageTag: latest
 
   wildcardhostname: "*.sandbox.fynarfin.io"
@@ -483,13 +483,13 @@ ph-ee-engine:
     enabled: true
 
   redis:
-    enabled: true
+    enabled: false
     replica:
       replicaCount: 0
 
 zeebe-operate:
   ingress:
-    enabled: true
+    enabled: false
     hostname: "zeebeoperate.sandbox.fynarfin.io"
     annotations:
       kubernetes.io/ingress.class: "nginx"
