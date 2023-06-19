@@ -499,3 +499,6 @@ zeebe-operate:
         name: "zeebe-operate"
         port:
           number: 80
+
+paymenthubs:
+  enabled: true
