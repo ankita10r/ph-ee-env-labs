@@ -237,7 +237,7 @@ ph-ee-engine:
         deployTime: "{{ .Values.deployTime }}"
 
   kafka:
-    enabled: true
+    enabled: false
     advertised:
       host: "kafka"
       port: "9092"
