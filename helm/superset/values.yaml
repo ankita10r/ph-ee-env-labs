@@ -480,7 +480,7 @@ ph-ee-engine:
       tls: []
 
   kong:
-    enabled: true
+    enabled: false
 
   redis:
     enabled: false
